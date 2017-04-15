@@ -1,0 +1,29 @@
+{
+  "name": "wwwer",
+  "version": "1.0.0",
+  "description": "wwwer",
+  "private": true,
+  "scripts": {
+    "start": "coffee app.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redirectr/wwwer.git"
+  },
+  "keywords": [
+    "wwwer"
+  ],
+  "author": "Nico Lindemann <nico.lindemann@proux.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/redirectr/wwwer/issues"
+  },
+  "homepage": "https://github.com/redirectr/wwwer#readme",
+  "dependencies": {
+    "coffee-script": "^1.12.5",
+    "coffeelint": "^1.16.0",
+    "debug": "^2.6.3",
+    "express": "^4.15.2",
+    "spdy": "^3.4.4"
+  }
+}
