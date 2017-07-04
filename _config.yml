@@ -6,5 +6,6 @@ description: Simple service for redirections from non-www to www domains
 # Build settings
 markdown: kramdown
 exclude: ["README.md"]
+host: 0.0.0.0
 sass:
   style: compressed
