@@ -1,0 +1,32 @@
+---
+# Main scss file
+---
+@charset "utf-8";
+
+@import
+  'normalize',
+  'solo',
+  'syntax';
+
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+ol li:before {
+  content: '';
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  background-image: url('data:image/svg+xml;charset=utf-8;base64,PHN2ZyBoZWlnaHQ9IjFlbSIgd2lkdGg9IjFlbSIgdmlld0JveD0iMCAwIDI0IDI0IiAgdmVyc2lvbj0nMS4xJyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnPg0KPHBhdGggY2xhc3M9InBhdGgxIiBmaWxsPSJncmVlbiIgZD0iTTkgMTYuMTcybDEwLjU5NC0xMC41OTQgMS40MDYgMS40MDYtMTIgMTItNS41NzgtNS41NzggMS40MDYtMS40MDZ6Ij48L3BhdGg+DQo8L3N2Zz4=');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+small {
+  font-size: 0.5em;
+}
