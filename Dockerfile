@@ -15,8 +15,7 @@ RUN gem install \
   rdiscount \
   rouge
 
-VOLUME /src
-COPY _site /src
+COPY . /src
 WORKDIR /src
 
 CMD jekyll serve
