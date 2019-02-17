@@ -1,21 +1,6 @@
-FROM ruby:2.1
-
-RUN apt-get update \
-  && apt-get install -y \
-    node \
-    python-pygments \
-  && apt-get clean \
-  && rm -rf /var/lib/apt/lists/
-
-RUN gem install \
-  github-pages \
-  jekyll \
-  jekyll-redirect-from \
-  kramdown \
-  rdiscount \
-  rouge
-
-COPY . /src
-WORKDIR /src
-
-CMD jekyll serve
+FROM openresty/openresty:latest-xenial
+COPY ./site /var/www/site/
+RUN /usr/local/openresty/luajit/bin/luarocks install lua-resty-auto-ssl
+RUN openssl req -new -newkey rsa:4096 -days 3650 -nodes -x509 -subj '/CN=sni-support-required-for-valid-ssl' -keyout /etc/ssl/resty-auto-ssl-fallback.key -out /etc/ssl/resty-auto-ssl-fallback.crt
+ADD nginx.conf /usr/local/openresty/nginx/conf/nginx.conf
+ENTRYPOINT ["/usr/local/openresty/nginx/sbin/nginx", "-g", "daemon off;"]
