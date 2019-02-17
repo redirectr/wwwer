@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "alias": ["www.towww.de", "www.wwwer.org"],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "status": 301,
+        "headers": { "Location": "https://wwwer.org" }
+      }
+    ]
+  }
