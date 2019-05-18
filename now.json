@@ -4,8 +4,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "status": 301,
-        "headers": { "Location": "https://wwwer.org" }
+        "status": 301, "headers": { "Location": "https://wwwer.org" }
       }
     ]
   }
