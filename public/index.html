@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,58 +9,76 @@
   <title>wwwer.org</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
   <div class="container">
     <h1><a href="./">wwwer.org</a></h1>
     <p>wwwer.org is a simple service for redirections from non-www to www domains.</p>
 
-<h2 id="what">What?</h2>
+    <h2 id="what">What?</h2>
 
-<ul>
-  <li>We simply redirect example.com to www.example.com for you.</li>
-  <li>We use <a href="https://tools.ietf.org/html/rfc7231#section-6.4.2">301 HTTP redirections</a>.</li>
-  <li>That’s it.</li>
-</ul>
+    <ul>
+      <li>We simply redirect example.com to www.example.com for you.</li>
+      <li>We use <a href="https://tools.ietf.org/html/rfc7231#section-6.4.2">301 HTTP redirections</a>.</li>
+      <li>That’s it.</li>
+    </ul>
 
-<h2 id="wait-what">Wait, what?</h2>
+    <h2 id="wait-what">Wait, what?</h2>
 
-<p>Some services are only working properly if you use a <code class="highlighter-rouge">CNAME</code> record to connect your domain with these services.
-Subdomainless addresses are usually connected with <code class="highlighter-rouge">A</code> and/or <code class="highlighter-rouge">AAAA</code> records. 
-<code class="highlighter-rouge">ALIAS</code> or <code class="highlighter-rouge">ANAME</code> records are not supported by every DNS provider. And it is a <a href="https://www.yes-www.org/">good idea</a>.</p>
+    <p>Some services are only working properly if you use a <code class="highlighter-rouge">CNAME</code> record to
+      connect your domain with these services.
+      Subdomainless addresses are usually connected with <code class="highlighter-rouge">A</code> and/or <code
+        class="highlighter-rouge">AAAA</code> records.
+      <code class="highlighter-rouge">ALIAS</code> or <code class="highlighter-rouge">ANAME</code> records are not
+      supported by every DNS provider. And it is a <a href="https://www.yes-www.org/">good idea</a>.</p>
 
-<h2 id="usage">Usage</h2>
+    <h2 id="usage">Usage</h2>
 
-<p>Use the IP address <strong><code class="highlighter-rouge">195.201.18.109</code></strong> for the content of an A record for your domain.
-If you’re able to add AAAA records, use <strong><code class="highlighter-rouge">[2a01:4f8:1c1c:d530::1]</code></strong> as well.</p>
+    <p>Use the IP address <strong><code class="highlighter-rouge">195.201.18.109</code></strong> for the content of an A
+      record for your domain.
+      If you’re able to add AAAA records, use <strong><code
+          class="highlighter-rouge">[2a01:4f8:1c1c:d530::1]</code></strong> as well.</p>
 
-<h2 id="features">Features</h2>
+    <h2 id="features">Features</h2>
 
-<ol>
-  <li>We support <a href="http://ipv6-test.com/validate.php?url=https://wwwer.org" rel="noreferrer" target="_blank"><code class="highlighter-rouge">IPv6</code></a>.</li>
-  <li>We support <a href="https://tools.keycdn.com/http2-test?url=https%3A%2F%2Fwwwer.org&public=1" rel="noreferrer" target="_blank"><code class="highlighter-rouge">HTTP/2</code></a>.</li>
-  <li>We support <a href="https://www.ssllabs.com/ssltest/analyze.html?d=wwwer.org" rel="noreferrer" target="_blank"><code class="highlighter-rouge">HTTPS</code></a>. (With <a href="https://letsencrypt.org/">Let’s Encrypt</a>)</li>
-</ol>
+    <ol>
+      <li>We support <a href="http://ipv6-test.com/validate.php?url=https://wwwer.org" rel="noreferrer"
+          target="_blank"><code class="highlighter-rouge">IPv6</code></a>.</li>
+      <li>We support <a href="https://tools.keycdn.com/http2-test?url=https%3A%2F%2Fwwwer.org&public=1" rel="noreferrer"
+          target="_blank"><code class="highlighter-rouge">HTTP/2</code></a>.</li>
+      <li>We support <a href="https://www.ssllabs.com/ssltest/analyze.html?d=wwwer.org" rel="noreferrer"
+          target="_blank"><code class="highlighter-rouge">HTTPS</code></a>. (With <a
+          href="https://letsencrypt.org/">Let’s Encrypt</a>)</li>
+    </ol>
 
-<h2 id="remarks">Remarks</h2>
+    <h2 id="remarks">Remarks</h2>
 
-<ul>
-  <li>Protocol will stay as requested (<code class="highlighter-rouge">http://example.com</code> to <code class="highlighter-rouge">http://www.example.com</code>, <code class="highlighter-rouge">https://example.com</code> to <code class="highlighter-rouge">https://www.example.com</code>).</li>
-  <li>We do <strong>not</strong> support connections below <code class="highlighter-rouge">TLS 1.2</code>.</li>
-  <li><code class="highlighter-rouge">HTTPS</code> only works in browsers with <code class="highlighter-rouge">SNI</code> support.</li>
-</ul>
+    <ul>
+      <li>Protocol will stay as requested (<code class="highlighter-rouge">http://example.com</code> to <code
+          class="highlighter-rouge">http://www.example.com</code>, <code
+          class="highlighter-rouge">https://example.com</code> to <code
+          class="highlighter-rouge">https://www.example.com</code>).</li>
+      <li>We do <strong>not</strong> support connections below <code class="highlighter-rouge">TLS 1.2</code>.</li>
+      <li><code class="highlighter-rouge">HTTPS</code> only works in browsers with <code
+          class="highlighter-rouge">SNI</code> support.</li>
+    </ul>
 
-<h2 id="contact">Contact</h2>
+    <h2 id="contact">Contact</h2>
 
-<p>If you have any questions feel free to contact us. <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#119;&#119;&#119;&#101;&#114;&#064;&#112;&#114;&#111;&#117;&#120;&#046;&#110;&#101;&#116;">&#119;&#119;&#119;&#101;&#114;&#064;&#112;&#114;&#111;&#117;&#120;&#046;&#110;&#101;&#116;</a></p>
+    <p>If you have any questions feel free to contact us. <a
+        href="&#109;&#097;&#105;&#108;&#116;&#111;:&#119;&#119;&#119;&#101;&#114;&#064;&#112;&#114;&#111;&#117;&#120;&#046;&#110;&#101;&#116;">&#119;&#119;&#119;&#101;&#114;&#064;&#112;&#114;&#111;&#117;&#120;&#046;&#110;&#101;&#116;</a>
+    </p>
 
-<h2 id="legal">Legal</h2>
+    <h2 id="legal">Legal</h2>
 
-<p>This service is provided “as is” and “as available”. We do not collect any personal information.
-You accept the <a href="https://letsencrypt.org/repository/">Let’s Encrypt Subscriber Agreement</a> with the use of this service.</p>
+    <p>This service is provided “as is” and “as available”. We do not collect any personal information.
+      You accept the <a href="https://letsencrypt.org/repository/">Let’s Encrypt Subscriber Agreement</a> with the use
+      of this service.</p>
 
-<p><small>proux ug (haftungsbeschränkt), sievekingsallee 114a, 20535 hamburg, germany, +49 40 2093 3981,<br />
-managing director: nico lindemann, vat-id: DE305787148, commercial register: ag hamburg hrb 138858</small></p>
+    <p><small>proux ug (haftungsbeschränkt), sievekingsallee 114a, 20535 hamburg, germany, +49 40 2093 3981,<br />
+        managing director: nico lindemann, vat-id: DE305787148, commercial register: ag hamburg hrb 138858</small></p>
 
   </div>
 </body>
+
 </html>
