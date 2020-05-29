@@ -80,6 +80,8 @@ jobs:
     steps:
       - name: SSH Remote Commands
         uses: appleboy/ssh-action@v0.1.1
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
@@ -87,8 +89,6 @@ jobs:
           port: ${{ secrets.PORT }}
           debug: true
           script_stop: true
-          env:
-            TOKEN: ${{ secrets.TOKEN }}
           script: |
             docker stop wwwer
             docker rm wwwer
