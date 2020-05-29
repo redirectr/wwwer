@@ -90,5 +90,6 @@ jobs:
           script: |
             docker stop wwwer
             docker rm wwwer
+            docker login https://docker.pkg.github.com -u nicolindemann -p 0eeaef4c2c44680896fd9eac48655917ee20a499
             docker pull docker.pkg.github.com/redirectr/wwwer/wwwer:latest
             docker run -d --name=wwwer --restart=always -p 80:80 -p 443:443 -v /etc/letsencrypt/:/etc/letsencrypt/:ro redirectr/wwwer
