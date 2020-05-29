@@ -87,9 +87,11 @@ jobs:
           port: ${{ secrets.PORT }}
           debug: true
           script_stop: true
+          env:
+            TOKEN: ${{ secrets.TOKEN }}
           script: |
             docker stop wwwer
             docker rm wwwer
-            docker login https://docker.pkg.github.com -u nicolindemann -p ${{ secrets.TOKEN }}
+            docker login https://docker.pkg.github.com -u nicolindemann -p $TOKEN
             docker pull docker.pkg.github.com/redirectr/wwwer/wwwer:latest
             docker run -d --name=wwwer --restart=always -p 80:80 -p 443:443 -v /etc/letsencrypt/:/etc/letsencrypt/:ro redirectr/wwwer
