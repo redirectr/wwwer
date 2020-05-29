@@ -88,6 +88,7 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           debug: true
+          envs: TOKEN
           script_stop: true
           script: |
             docker stop wwwer
